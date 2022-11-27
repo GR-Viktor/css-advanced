@@ -1,4 +1,6 @@
-body {
-  background-color: #000;
-}
-
+@import 'base/colors';
+@import 'base/reset';
+@import '../node_modules/bootstrap/dist/css/bootstrap-grid.css';
+@import 'layout/section';
+@import 'components/filters';
+@import 'components/gradient';
