@@ -1,0 +1,24 @@
+.color {
+  color: green;
+}
+
+.header {
+  height: 95px;
+  background-color: green;
+}
+
+.main {
+  display: flex;
+  height: calc(100vh - 95px);
+}
+
+.sidebar-area {
+  width: 232px;
+  background-color: pink;
+}
+
+.content-area {
+  width: calc(100% - 232px);
+  background-color: aliceblue;
+  overflow-y: auto;
+}
