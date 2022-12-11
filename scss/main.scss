@@ -3,11 +3,18 @@
 @import 'base/breakpoints';
 @import 'base/helpers';
 @import 'base/reset';
+
+* {
+  box-sizing: border-box;
+}
+
 @import '../node_modules/bootstrap/dist/css/bootstrap-grid.css';
+@import '../node_modules/select2/src/scss/core.scss';
 @import 'layout/section';
 @import 'layout/ratio-box';
 @import 'components/animations';
 @import 'components/filters';
+@import 'components/forms';
 @import 'components/gradient';
 @import 'components/transform';
 @import 'components/transitions';
