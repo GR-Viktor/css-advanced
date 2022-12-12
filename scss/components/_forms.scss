@@ -1,0 +1,124 @@
+.visually-hidden {
+  clip: rect(0 0 0 0); 
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+.dropdown-input {
+  visibility: hidden;
+  position: absolute;
+  pointer-events: none;
+
+  &:checked {
+    ~ .dropdown-content {
+      max-height: 100px;
+    }
+  }
+}
+
+.dropdown-content {
+  max-height: 0;
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+}
+
+.dropdown-button {
+  cursor: pointer;
+  border: 1px solid #000;
+  padding: 10px;
+  display: inline-block;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards__button {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: #ccc;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.cards__input {
+  visibility: hidden;
+  position: absolute;
+  pointer-events: none;
+}
+
+.cards__input--1:checked ~ .cards__button--1,
+.cards__input--2:checked ~ .cards__button--2,
+.cards__input--3:checked ~ .cards__button--3,
+.cards__input--4:checked ~ .cards__button--4 {
+  opacity: 1;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox__label {
+  margin-left: 10px;
+}
+
+.checkbox__box {
+  width: 25px;
+  height: 25px;
+  border: 3px solid #000;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  
+
+  svg {
+    display: none;
+    fill: red;
+  }
+}
+
+.checkbox__input {
+  &:checked {
+    ~ .checkbox__box {
+      svg {
+        display: block;
+      }
+    }
+  }
+}
+
+.simple-select {
+  position: relative;
+  width: 300px;
+
+  select {
+    appearance: none;
+    border: 2px solid #000;
+    padding: 7px 32px 7px 14px;
+    width: 100%;
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}
+
+.simple-select__arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 12px;
+  height: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
